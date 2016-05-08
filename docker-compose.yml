@@ -1,0 +1,30 @@
+version: "2"
+
+services:
+  jenkins:
+    image: jenkins:2.0
+    ports:
+      - "8080:8080"
+    links:
+      - slave1
+      - slave2
+    networks:
+      - front-tier
+      - back-tier
+
+  slave1:
+    #image: 6292bcc6d1a5
+    image: otomato/jenkins-slave:0.1
+    networks:
+      - front-tier
+      - back-tier
+
+  slave2:
+    image: otomato/jenkins-slave:0.1
+    networks:
+      - front-tier
+      - back-tier
+
+networks:
+  front-tier:
+  back-tier:
