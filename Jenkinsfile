@@ -1,4 +1,4 @@
-node 'slave1' {
+node ('slave1') {
    // Mark the code checkout 'stage'....
    stage 'Checkout'
 
@@ -7,7 +7,7 @@ node 'slave1' {
 
    // Get the maven tool.
    // ** NOTE: This 'M3' maven tool must be configured
-   // **       in the global configuration.           
+   // **       in the global configuration.
    def mvnHome = tool 'M3'
 
    // Mark the code build 'stage'....
