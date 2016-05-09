@@ -1,4 +1,4 @@
-node ('slave1') {
+node('slave1') {
    // Mark the code checkout 'stage'....
    stage 'Checkout'
 
