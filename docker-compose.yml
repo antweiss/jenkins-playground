@@ -11,7 +11,9 @@ services:
       - front-tier
       - back-tier
   slave2:
-    image: otomato/jenkins-slave:0.3
+    image: otomato/jenkins-slave:0.4
+    volumes:
+      - ~/.kube/config:/home/jenkins/.kube/config
     networks:
       - front-tier
       - back-tier
