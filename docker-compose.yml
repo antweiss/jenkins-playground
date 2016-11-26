@@ -6,12 +6,12 @@ services:
     ports:
       - "80:8080"
     links:
-      - slave2
+      - slave
     networks:
       - front-tier
       - back-tier
-  slave2:
-    image: otomato/jenkins-slave:0.4
+  slave:
+    image: otomato/jenkins-slave:0.5
     volumes:
       - ~/.kube/config:/home/jenkins/.kube/config
     networks:
