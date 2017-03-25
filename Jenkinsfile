@@ -6,9 +6,9 @@ node {
    git url: 'https://github.com/antweiss/jenkins-examples.git'
 
    // Get the maven tool.
-   // ** NOTE: This 'M3' maven tool must be configured
+   // ** NOTE: This 'maven3' maven tool must be configured
    // **       in the global configuration.
-   def mvnHome = tool 'M3'
+   def mvnHome = tool 'maven3'
 
    // Mark the code build 'stage'....
    stage 'Build'
