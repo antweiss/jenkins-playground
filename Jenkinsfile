@@ -1,3 +1,4 @@
+#!groovy
 node {
    // Mark the code checkout 'stage'....
    stage 'Checkout'
