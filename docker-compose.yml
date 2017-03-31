@@ -5,17 +5,6 @@ services:
     image: jenkins
     ports:
       - "80:8080"
-    links:
-      - slave
-    networks:
-      - front-tier
-      - back-tier
-  slave:
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /etc/group:/etc/group
-      - /home/ant_weiss/.docker:/home/jenkins/.docker
-    image: otomato/jenkins-slave:0.6
     networks:
       - front-tier
       - back-tier
@@ -24,7 +13,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/group:/etc/group
       - /home/ant_weiss/.docker:/home/jenkins/.docker
-    image: 75aa6ece1633
+      - /opt/bin/kubectl:/usr/bin/kubectl
+      - /home/ant_weiss/.kube:/home/jenkins/.kube
+    image: otomato/jenkins-slave:alpine
     networks:
       - front-tier
       - back-tier
