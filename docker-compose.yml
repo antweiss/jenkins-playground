@@ -11,11 +11,23 @@ services:
       - front-tier
       - back-tier
   slave:
-    image: otomato/jenkins-slave:0.5
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/group:/etc/group
+      - /home/ant_weiss/.docker:/home/jenkins/.docker
+    image: otomato/jenkins-slave:0.6
     networks:
       - front-tier
       - back-tier
-
+  slave1:
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/group:/etc/group
+      - /home/ant_weiss/.docker:/home/jenkins/.docker
+    image: 75aa6ece1633
+    networks:
+      - front-tier
+      - back-tier
 networks:
   front-tier:
   back-tier:
