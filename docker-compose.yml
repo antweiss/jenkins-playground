@@ -19,6 +19,13 @@ services:
     networks:
       - front-tier
       - back-tier
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - front-tier
+      - back-tier
 networks:
   front-tier:
   back-tier:
