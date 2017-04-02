@@ -15,7 +15,7 @@ services:
       - /home/ant_weiss/.docker:/home/jenkins/.docker
       - /opt/bin/kubectl:/usr/bin/kubectl
       - /home/ant_weiss/.kube:/home/jenkins/.kube
-    image: otomato/jenkins-slave:alpine
+    image: otomato/jenkins-slave-alpine:curl
     networks:
       - front-tier
       - back-tier
