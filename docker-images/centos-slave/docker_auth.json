@@ -1,0 +1,28 @@
+{
+	"auths": {
+		"docker-public.artifactory.otomato.link": {
+			"auth": "YnVpbGRlcjoxcWF6eHN3Mg==",
+                        "email": "builder@otomato.link"
+		},
+		"docker.artifactory.otomato.link": {
+			"auth": "YnVpbGRlcjoxcWF6eHN3Mg==",
+                        "email": "builder@otomato.link"
+		},
+		"docker.otomato.link": {
+			"auth": "YnVpbGRlcjoxcWF6eHN3Mg==",
+			"email": "builder@otomato.link"
+		},
+		"https://docker.artifactory.otomato.link": {
+			"auth": "YnVpbGRlcjoxcWF6eHN3Mg==",
+                        "email": "builder@otomato.link"
+		},
+                "artifactory.otomato.link:6555": {
+                        "auth": "YnVpbGRlcjoxcWF6eHN3Mg==",
+                        "email": "builder@otomato.link"
+                },
+                "artifactory.otomato.link:7555": {
+                        "auth": "YnVpbGRlcjoxcWF6eHN3Mg==",
+                        "email": "builder@otomato.link"
+                }
+	}
+}

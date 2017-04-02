@@ -1,0 +1,1 @@
+buildsrv3.otomato.link:/opt/otomato/sdb1	/opt/otomato/CI	nfs	rw,nfsvers=3,nolock,hard,rsize=32768,wsize=32768,intr,nocto,noatime,nodiratime,noac,noacl	0	0

@@ -1,0 +1,21 @@
+[otomato-external]
+name=otomato-external
+baseurl=http://artifactory.otomato.link:8081/artifactory/otomato-external-$releasever-$basearch/
+failovermethod=priority
+gpgcheck=0
+enabled=1
+
+[epel]
+name=Extra Packages for Enterprise Linux 7 - $basearch
+#baseurl=http://download.fedoraproject.org/pub/epel/7/$basearch
+mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=0
+
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/centos/7/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
