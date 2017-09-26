@@ -22,7 +22,7 @@ RUN groupadd -g 10000 Developers \
     && pip install tensorflow \
     && pip install ujson \
     && useradd -m -d /home/builder -g 10000 -u 10532 -G wheel -G docker builder \
-    && echo 1qazxsw2 | passwd builder --stdin \
+    && echo ********* | passwd builder --stdin \
     && echo 'builder ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
     && perl -i -ple 's/^D.*requiretty/\#Defaults requiretty/g' /etc/sudoers \
     && mkdir -p /home/builder/workspace && mkdir -p /home/builder/.ssh \
