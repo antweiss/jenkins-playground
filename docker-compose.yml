@@ -11,10 +11,6 @@ services:
   slave1:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /etc/group:/etc/group
-      - /home/ant_weiss/.docker:/home/jenkins/.docker
-      - /opt/bin/kubectl:/usr/bin/kubectl
-      - /home/ant_weiss/.kube:/home/jenkins/.kube
     image: otomato/jenkins-slave-alpine:curl
     networks:
       - front-tier
