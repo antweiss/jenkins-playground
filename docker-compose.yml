@@ -12,9 +12,9 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/group:/etc/group
-      - /home/ant_weiss/.docker:/home/jenkins/.docker
+      - /home/${USER}/.docker:/home/jenkins/.docker
       - /usr/bin/kubectl:/usr/bin/kubectl
-      - /home/ant_weiss/.kube:/home/jenkins/.kube
+      - /home/${USER}/.kube:/home/jenkins/.kube
       - /usr/lib/google-cloud-sdk:/usr/lib/google-cloud-sdk
     image: otomato/jenkins-slave-alpine:python
     networks:
