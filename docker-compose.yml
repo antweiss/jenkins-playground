@@ -7,15 +7,11 @@ services:
       - "80:8080"
     networks:
       - front-tier
-      - back-tier
   slave1:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/group:/etc/group
       - /home/${USER}/.docker:/home/jenkins/.docker
-      - /usr/bin/kubectl:/usr/bin/kubectl
-      - /home/${USER}/.kube:/home/jenkins/.kube
-      - /usr/lib/google-cloud-sdk:/usr/lib/google-cloud-sdk
     image: otomato/jenkins-slave-alpine:python
     networks:
       - front-tier
@@ -25,7 +21,6 @@ services:
     ports:
       - "27017:27017"
     networks:
-      - front-tier
       - back-tier
 networks:
   front-tier:
