@@ -2,7 +2,7 @@ version: "2"
 
 services:
   jenkins:
-    image: jenkins
+    image: jenkins/jenkins:lts
     ports:
       - "80:8080"
     networks:
