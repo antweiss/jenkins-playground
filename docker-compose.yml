@@ -11,7 +11,7 @@ services:
   slave1:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    image: otomato/jenkins-slave-alpine:curl
+    image: otomato/jenkins-slave:0.7
     networks:
       - front-tier
       - back-tier
