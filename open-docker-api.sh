@@ -1,6 +1,5 @@
 #! /bin/bash
 sudo mkdir -p /etc/systemd/system/docker.service.d
-# possibility 3:
 sudo tee -a /etc/systemd/system/docker.service.d/startup_options.conf  > /dev/null <<EOT
 # /etc/systemd/system/docker.service.d/override.conf
 [Service]
